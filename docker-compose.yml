@@ -1,0 +1,16 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  mysql:
+    image: 'bitnami/mysql:latest'
+    ports:
+    - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_USER=user
+      - MYSQL_DATABASE=db
+      - MYSQL_PASSWORD=password
+      - DB_ENABLE_SSL=false
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro

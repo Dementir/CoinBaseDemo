@@ -1,0 +1,7 @@
+#mysql: "Server=localhost;Port=3306;Database=sb;Uid=user;Pwd=password;"
+mysql: "user:password@tcp(localhost:3306)/db"
+host: "ws-feed.pro.coinbase.com"
+cryptoCurrencyPairs:
+  - "ETH-BTC"
+  - "BTC-USD"
+  - "BTC-EUR"
